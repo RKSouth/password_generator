@@ -1,4 +1,4 @@
-# 03 JavaScript: Password Generator
+#  JavaScript: Password Generator
 
 ### The goal of this project is to make a randomly generated password that a range of selected user criteria and allows them to smoothly and easily get a fresh and secure password. 
 
@@ -32,8 +32,11 @@ To allow users to determine how secure they want their passwords. For instance, 
 
 _What?/How?_
 
-   
+   ![How?-Prompts](Assets/codeprogressphoto-03.png)
 
+In order to create a prompt that does something we need to set it a variable. I set each criteria to it's own variable with it's own prompt inside of the function writePassword.
+
+Inside of the function generatePassword I created new variables for lower case, upper case, special character and numbers and made them all one string that we add together and randomly pull from. The selector, or the character length needed to be set to an integer and not used as a string. I also created if statements inside this function to detmerine what to do if n is selected. Outside of all of this, on the very bottom, after long and exhaustive definitions is the call for the function generatePassword. This is what says when that function is suppose to work after we have actually written all of the criteria to create it. 
 
 __2. Validation for correct Input__
 
@@ -47,7 +50,7 @@ _What?/How?_
 	
 In order to have a customizable password, selections need to be made before the password is generated. Therefore, when the button "Generate Password" is clicked a prompt comes up allows the user to input their specific criteria. If they don't enter any valid criteria then they alerted and sent back to the previous prompt to enter in valid criteria. If they do not select some combination of upper case, lower case, numbers and special characters they will be prompted again. 
 
-![How?](Assets/codeprogressphoto4.png)
+![How? -Validation](Assets/codeprogressphoto-04.png)
 
 I created a series of while loops and if/else (conditional) statements that look for a boolean (true or false) of happyYet if we aren't happy Yet then we create more prompts/alerts. Each time a new loop on a new condition runs, happy Yet is reset and we have to use the conditional statement to turn it back to true. This is nested in yet another loop that checks if there are any yes statements. In this way we never leave anyone behind. Wrapping the major criteria (all except the password length) in another loop ensures that the user has to have some criteria. If they were to select no for everything then there woud be no way to generate a password. 
 
