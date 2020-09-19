@@ -68,18 +68,17 @@ _What?/How?_
 
    As far as I can tell with my code, aside from making sure things are validated using a series of prompts there are two things that are integral to creating a good password within this code. 
 
-* 1. 
-   ' var chars = uCase + lCase + sChar + num;
+* ' var chars = uCase + lCase + sChar + num;
 
   pass = "";
   for (var x = 0; x < length; x++) {
       var i = Math.floor(Math.random() * chars.length);
       pass += chars.charAt(i);
   }'
+
     The chars variable concatinates all of the peices of the user specified criteria and then randomizes from those groups until the selection length is reached.
 
-* 2. 
-  'isAY = false ;
+* 'isAY = false ;
   while (isAY == false) {
     if (pwUpper == 'y' || pwLower == 'y' || pwSpecial == 'y' || pwNumber == 'y') 
   {
@@ -88,20 +87,41 @@ _What?/How?_
     alert("Please select at least one time of character with a y, unless you don't really want a password.")
   }
 }'
-    This code does not allow the users to get away without using a y.
+
+    This code does not allow the users to get away without using a y by using the conditional statement to see if any y's were used else, produce an alert and go back to the beginning until isAY is set to true.
 
 
-![Responsive Image 4](Assets/Images/responsiveimg_02.png)
+__4. A button__
 
-Above is an image of the portfolio section with a very interesting bird on it. This is the collaposed version of the website. Note how the navbar is a small drop down square instead of 3 different items and how the "bird" takes up the whole screen. The card does show some uneven margins but it does resize. Also note, how the image that was once left to to it (you can see the original below and there is nice spacing there. 
 
-![Responsive Image 5](Assets/Images/responsiveimg_04.png)
+_Why?_
 
-   I found the answer to be simpler than I would have originally thought. Creating first 3 rows, then 2 collumns per row, adding a padding of 3, making sure the image was fluid and that collapsed at just the right time. 
-	
+I suppose we need a button to get started on the prompts. It is pretty annoying when you open a webpage and a prompt immediately comes up without you asking it to. The button allows to loop through as well. We can start and then if we need to we can start all over again. It will rewrite passwords to our hearts content.
+
+_What?How?_
+
+There are 3 seperate parts of a button in java script that connect to an additional part in html. 
+
+in html are code looks like this:
+
+'<button id="generate" class="btn">Generate Password</button>'
+
+It contains an id, a class and a area all ecompassed in it's very own special button tag.
+
+There are two ways to call a button and make it work in Javascript but I will only explain the way I did it.
+
+First, I created a variable called generateBtn. I then set it equal to 'document.querySelector("#generate");' The #generate refers back to the id given in the html. We now have that very vital connection where our button is going to begin to think about doing a thing.
+
+Second step is to make content -I need something for this button to do so when the button is pushed it needs to write to the document (html) in the text area called (id) password. This is is where our password will show up. We use the variable, pass to hold the password. 
+'document.getElementById('password').value = pass;'
+
+
+'generateBtn.addEventListener("click", writePassword);'
+
+Finally, we have to tell the button to listen. What to listen for? A click! What are we doing upon click? writing the password!	
    
     
-__4. Other/Potentional Complaints__
+__5. Other/Potentional Complaints__
 
 * All the colors in the CSS are green
 
