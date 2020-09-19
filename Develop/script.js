@@ -28,6 +28,8 @@ function writePassword() {
   //get neccesary user inputs with variables/prompts
   //will need an if/else statement to prompt user if too many or too few characters
 
+  //resetting hapyYet to false and using a while loop create alerts everytime a criteria isn't met
+
   happyYet = false;
 
   while (happyYet == false) {
@@ -36,7 +38,10 @@ function writePassword() {
     } else {
       alert("Please enter a number between 8 and 128");
     }
-  }  
+  } 
+   //resetting isAY to false and using a while loop create alerts everytime a criteria isn't met 
+  isAY = false ;
+  while (isAY == false) {
 
   happyYet = false;
 
@@ -76,7 +81,16 @@ function writePassword() {
     } else {
       alert("Please enter a y or an n");
     }
-  }  
+  }
+
+  if (pwUpper == 'y' || pwLower == 'y' || pwSpecial == 'y' || pwNumber == 'y') 
+  {
+    isAY = true
+  } else {
+    alert("Please select at least one time of character with a y, unless you don't really want a password.")
+  }
+}
+//end of while loop to see if there are y's 
   //leaving the parseInt in to remind me that prompts always return strings. 
   // pwLength= parseInt(prompt("Choose a length of at least 8 characters and no more than 128 characters"));
   // pwUpper= prompt("Would you like Upper case letters in your password (y or n)?");
