@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 var pass = "";
 //create pw
-function randomPassword(length) {
+function generatePassword(length) {
   var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
   pass = "";
   for (var x = 0; x < length; x++) {
@@ -15,9 +15,13 @@ function randomPassword(length) {
 function writePassword() {
   //get neccesary user inputs
   //will need an if/else statement to prompt user if too many or too few characters
+  //leaving the parseInt in to remind me that prompts always return strings. 
   pwLength= parseInt(prompt("Choose a length of at least 8 characters and no more than 128 characters"));
-  // fill in an input for 20
-  randomPassword(pwLength);
+  pwUpper= prompt("Would you like Upper case letters in your password (y or n)?");
+  pwLower=prompt("Would you like Lower case letters in your password (y or n)?");
+  pwSpecial= prompt("Would you like special characters in your password (y or n)?");
+  pwNumber=prompt("Would you like numbers in your password (y or n)?");
+  generatePassword(pwLength);
   console.log(pwLength);
   console.log(pass);
   document.getElementById('password').value = pass;
