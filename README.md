@@ -133,13 +133,13 @@ In my working experience, the folks that need extra secure passwords are also th
 
 _Why?_
 
-    Mainly because prompts were specifically requested. However, using a yes or no might be simpler in the long run. 
+Mainly because prompts were specifically requested. However, using a yes or no might be simpler in the long run. 
 
 * There are not that many commits
 
 _Why?_
 
-   I did most of the preliminary figuring out of my random generator and my button on paper and with my study group. There was an extensive amount of pseudocode/whiteboarding before I began typeing things in. I used my notes from the previous week to piece things together and think about how they would work or wouldn't work. I suppose I could add pictures of my notes but I am horribly ashamed of how messy they might look, and seeing as they were just for me -there is a huge chance that if you could them, you wouldn't be able to make sense of them. 
+I did most of the preliminary figuring out of my random generator and my button on paper and with my study group. There was an extensive amount of pseudocode/whiteboarding before I began typeing things in. I used my notes from the previous week to piece things together and think about how they would work or wouldn't work. I suppose I could add pictures of my notes but I am horribly ashamed of how messy they might look, and seeing as they were just for me -there is a huge chance that if you could them, you wouldn't be able to make sense of them. 
 
   
 
