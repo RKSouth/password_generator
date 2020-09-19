@@ -2,8 +2,20 @@
 var generateBtn = document.querySelector("#generate");
 var pass = "";
 //create pw
-function generatePassword(length) {
-  var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
+//function is having all user prompt responses in to the generated function
+function generatePassword(length, upper, lower, special, number) {
+  //Creating variables to pass through random generator
+  var uCase =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lCase = "abcdefghijklmnopqrstuvwxyz";
+  var sChar = "!@#$%^&*()-+<>";
+  var num = "0123456789";
+  //setting variables to blank set if n indicated
+  if (upper == 'n')  {uCase = ""};
+  if (lower == 'n')  {lCase = ""};
+  if (special == 'n')  {sChar = ""};
+  if (number == 'n')  {num = ""};
+  var chars = uCase + lCase + sChar + num;
+  // var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
   pass = "";
   for (var x = 0; x < length; x++) {
       var i = Math.floor(Math.random() * chars.length);
@@ -21,8 +33,10 @@ function writePassword() {
   pwLower=prompt("Would you like Lower case letters in your password (y or n)?");
   pwSpecial= prompt("Would you like special characters in your password (y or n)?");
   pwNumber=prompt("Would you like numbers in your password (y or n)?");
-  generatePassword(pwLength);
-  console.log(pwLength);
+
+  //use generate password function with all user defined attrubites to generate password
+  generatePassword(pwLength, pwUpper, pwLower, pwSpecial, pwNumber);
+  console.log(pwLength +pwUpper + pwLower + pwSpecial + pwNumber);
   console.log(pass);
   document.getElementById('password').value = pass;
   // var password = generatePassword();
