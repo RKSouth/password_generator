@@ -60,11 +60,36 @@ __3. A Generated password that meets all criteria__
 
 _Why?_
 
-If the page resizes and components of the page resize and the image doesn't, we end up with a page that is only image and nothing else. If you are working on a smaller screen this is just no beuno. It make the screen and by extension the site completely unusable and when it comes to webpage design usability needs to be the number one concern.
+If you are going to create something it really should meet all the criteria, shouldn't it? I don't want to create a password generator that doesn't do what it promises to do.
 
 
 
 _What?/How?_
+
+   As far as I can tell with my code, aside from making sure things are validated using a series of prompts there are two things that are integral to creating a good password within this code. 
+
+* 1. 
+   ' var chars = uCase + lCase + sChar + num;
+
+  pass = "";
+  for (var x = 0; x < length; x++) {
+      var i = Math.floor(Math.random() * chars.length);
+      pass += chars.charAt(i);
+  }'
+    The chars variable concatinates all of the peices of the user specified criteria and then randomizes from those groups until the selection length is reached.
+
+* 2. 
+  'isAY = false ;
+  while (isAY == false) {
+    if (pwUpper == 'y' || pwLower == 'y' || pwSpecial == 'y' || pwNumber == 'y') 
+  {
+    isAY = true
+  } else {
+    alert("Please select at least one time of character with a y, unless you don't really want a password.")
+  }
+}'
+    This code does not allow the users to get away without using a y.
+
 
 ![Responsive Image 4](Assets/Images/responsiveimg_02.png)
 
@@ -76,21 +101,19 @@ Above is an image of the portfolio section with a very interesting bird on it. T
 	
    
     
-__3. Other/Potentional Complaints__
+__4. Other/Potentional Complaints__
 
 * All the colors in the CSS are green
 
 _Why?_
 
-   I originally meant to resize it using CSS to make it more navigatible. However, I decided I like the simplicty of a little bit of mountain and a lot of sky. I also anticipate that my portfolio will grow and change and as it does my background image will become more visible-as the page gets longer. I love adding those little bits of surprise to my code and designs, it's like a fruity after taste that lingers in your mouth after a really good desert. 
+In my working experience, the folks that need extra secure passwords are also the ones that need to relax. I chose to edit the CSS  to create a calmer color pallete that would easy on the eyes for those working in stressful environments. I know it might be a huge stretch but I would hope that if someone comes to my site and generates a new password that they might enjoy the calm refreshing green I chose, they might feel renewed in their work and ready to acheive great things with sensitive data. 
 
 * I used prompts instead of confirm statements
 
 _Why?_
 
-   I have a lot reasons I can give for this but mainly it's because I am too stubborn for my own good. Though, the challange was fun to try to get a card to work instead of using sanity, I would probably not do it again. I had a vision, and I was sure I could make it work. I hope, reader, that you think it worked as well as I did. 
-   
-   If I were going to do this again, I would use CSS or a style tag to make a background inside of a container instead of using a card. 
+    Mainly because prompts were specifically requested. However, using a yes or no might be simpler in the long run. 
 
 * There are not that many commits
 
@@ -98,18 +121,11 @@ _Why?_
 
    I did most of the preliminary figuring out of my random generator and my button on paper and with my study group. There was an extensive amount of pseudocode/whiteboarding before I began typeing things in. I used my notes from the previous week to piece things together and think about how they would work or wouldn't work. I suppose I could add pictures of my notes but I am horribly ashamed of how messy they might look, and seeing as they were just for me -there is a huge chance that if you could them, you wouldn't be able to make sense of them. 
 
-   * Your Portfolio is just pictures of projects with no github links
-
-_Why?_
-
-   I have the preliminary git hub repos made for those projects and I would like to add them in. But I wasn't sure exactly what my readme should look and that is a project for my "extra projects" time. I also want to just get a better idea of what it would like when I do have projects in there. 
   
 
 ## Usage
-### How do you use this project? You may use it nearly anyway you see fit however, if you feel lost, scared and alone; I have some suggestions for you. 
- 1. You may admire it, sit back and take in the beauty. Peruse through the code. Enjoy it as if it were an old coletrain record, Bach or Monet. So, I might not be quite there yet but not every note written by Bach was divined, Coletain didn't start out great and in the beginning Monet's art looked like everyone elses at the time.
- 2. You can judge it. You can critisize and even give useful feedback. How can I improve? Do you know how to write code as beautiful as Monet paints- I want to know your secrets.
- 3. You can x out. You came here by accident and only realized right now you weren't suppose to be here. So, it's cool. Have a good night. 
+### This is meant for employees who need to generate secure passwords to be used to access sensitive data.
+
 ## Author 
 Rachael Kelm-Southworth
 
