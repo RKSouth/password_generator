@@ -25,17 +25,68 @@ function generatePassword(length, upper, lower, special, number) {
 
 // Write password to the #password input
 function writePassword() {
-  //get neccesary user inputs
+  //get neccesary user inputs with variables/prompts
   //will need an if/else statement to prompt user if too many or too few characters
+
+  happyYet = false;
+
+  while (happyYet == false) {
+    pwLength= parseInt(prompt("Choose a length of at least 8 characters and no more than 128 characters"));
+    if (pwLength >= 8 &&  pwLength <= 128) {happyYet = true;
+    } else {
+      alert("Please enter a number between 8 and 128");
+    }
+  }  
+
+  happyYet = false;
+
+  while (happyYet == false) {
+    pwUpper= prompt("Would you like Upper case letters in your password (y or n)?");
+    if (pwUpper == 'y'|| pwUpper =='n') {happyYet = true;
+    } else {
+      alert("Please enter a y or an n");
+    }
+  }  
+
+  happyYet = false;
+
+  while (happyYet == false) {
+    pwLower=prompt("Would you like Lower case letters in your password (y or n)?");
+    if (pwLower == 'y'|| pwLower =='n') {happyYet = true;
+    } else {
+      alert("Please enter a y or an n");
+    }
+  }  
+
+  happyYet = false;
+
+  while (happyYet == false) {
+    pwSpecial= prompt("Would you like special characters in your password (y or n)?");
+    if (pwSpecial == 'y'|| pwSpecial =='n') {happyYet = true;
+    } else {
+      alert("Please enter a y or an n");
+    }
+  }  
+
+  happyYet = false;
+
+  while (happyYet == false) {
+    pwNumber=prompt("Would you like numbers in your password (y or n)?");
+    if (pwNumber == 'y'|| pwNumber =='n') {happyYet = true;
+    } else {
+      alert("Please enter a y or an n");
+    }
+  }  
   //leaving the parseInt in to remind me that prompts always return strings. 
-  pwLength= parseInt(prompt("Choose a length of at least 8 characters and no more than 128 characters"));
-  pwUpper= prompt("Would you like Upper case letters in your password (y or n)?");
-  pwLower=prompt("Would you like Lower case letters in your password (y or n)?");
-  pwSpecial= prompt("Would you like special characters in your password (y or n)?");
-  pwNumber=prompt("Would you like numbers in your password (y or n)?");
+  // pwLength= parseInt(prompt("Choose a length of at least 8 characters and no more than 128 characters"));
+  // pwUpper= prompt("Would you like Upper case letters in your password (y or n)?");
+  // pwLower=prompt("Would you like Lower case letters in your password (y or n)?");
+  // pwSpecial= prompt("Would you like special characters in your password (y or n)?");
+  // pwNumber=prompt("Would you like numbers in your password (y or n)?");
 
   //use generate password function with all user defined attrubites to generate password
   generatePassword(pwLength, pwUpper, pwLower, pwSpecial, pwNumber);
+  //make console log more readable
   console.log(pwLength +pwUpper + pwLower + pwSpecial + pwNumber);
   console.log(pass);
   document.getElementById('password').value = pass;
