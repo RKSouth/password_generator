@@ -38,6 +38,9 @@ THEN the password is either displayed in an alert or written to the page -->
 
 ### The goal of this project is to make a randomly generated password that a range of selected user criteria and allows them to smoothly and easily get a fresh and secure password. 
 
+![Password Generator](Assets/FinishProduct.png)
+
+
 ## Table of Contents
 * [Technologies Used](Technologies_Used)
 * [Deployed Site](Deployed)
@@ -66,48 +69,26 @@ To allow users to determine how secure they want their passwords. For instance, 
 
 _What?/How?_
 
-    In order to have a customizable password, selections need to be made before the password is generated. Therefore, when the button "Generate Password" is clicked a prompt comes up allows the user to input their specific criteria. If they don't enter any valid criteria then they alerted and sent back to the previous prompt to enter in valid criteria. If they do not select some combination of upper case, lower case, numbers and special characters they will be prompted again. 
+   
 
-	![How?](Assets/codeprogressphoto4.png)
-
-    I created a series of while loops and if/else (conditional) statements that look for a boolean (true or false) of happyYet if we aren't happy Yet then we create more prompts/alerts. Each time a new loop on a new condition runs, happy Yet is reset and we have to use the conditional statement to turn it back to true. This is nested in yet another loop that checks if there are any yes statements. 
-
-
-The original code for the navbar came from the Bootstrap framework. However, there were a few issues with it:
-* It did not fix to top of the screen
-* The list items were on the wrong side
-* Depending on the navbar, it did not collapse (originally for me).
-
-
-As you can see, I added a fixed-top section on line 29 inside if the nav class, allowing the navbar to be permanantly affixed to the top. 
-
-On line 35, when the unordered list (ul) is created the margin is set for the line to go to left. On the middle screen-width setting, it moves the list to the margin-left using the md-auto. I am not sure why the auto is there but I do know, without it, that it will not work. 
-
-The original [code](https://getbootstrap.com/docs/4.5/components/navbar/) has the nav buttons always located on the right so it is absolutely neccesary to go in and change it if you want them to be on right. 
-
-I had one major hiccup with my nav bar, it didn't reduce when I reduced the screen size. Therefore, it was not responsive ***gasp***. It turns out though, that my only issue was being comment-happy. I commented out the entire toggle section and it worked just fine. 
 
 __2. Validation for correct Input__
 
 _Why?_
 
-Not everyone wants to use the same size screen, sometimes we use phone sometimes we use giant monitors. The layout of my portfolio needs to look good where ever it is being viewed.
+    This feature does feed into the others but I felt it important to address this issue seperately. Before completely this projects, I saw a lot of code examples and projects similar to mine that did not validate and accepted incorrect input. I chose to build my validation in but I do know there are people that consider checking for a correct answer very different than checking for an answer. 
+
+
 
 _What?/How?_
-	![Responsive Image 1](Assets/Images/responsiveimg_03.png)
+	
+        In order to have a customizable password, selections need to be made before the password is generated. Therefore, when the button "Generate Password" is clicked a prompt comes up allows the user to input their specific criteria. If they don't enter any valid criteria then they alerted and sent back to the previous prompt to enter in valid criteria. If they do not select some combination of upper case, lower case, numbers and special characters they will be prompted again. 
 
-Above in an image of the about me or the index.html page. What is most important to note on this page is the way margins are. The fact that about me card is being filled with text. Further examples of what the website being responsive looks like can be found below. You may note at the images in the "responsive images" section that instead of having text it is the toggle box. Further comparison to this image (when considering the margin) may be helpful.
-    ![Responsive Image 2](Assets/Images/responsiveimg_01.png)
+	![How?](Assets/codeprogressphoto4.png)
 
-Below is an image of the code after it had been worked over several times. If you look you will probably be able to spot the errors.
-   ![Responsive Image 3](Assets/Images/responsivecode_01.png)
+    I created a series of while loops and if/else (conditional) statements that look for a boolean (true or false) of happyYet if we aren't happy Yet then we create more prompts/alerts. Each time a new loop on a new condition runs, happy Yet is reset and we have to use the conditional statement to turn it back to true. This is nested in yet another loop that checks if there are any yes statements. In this way we never leave anyone behind. Wrapping the major criteria (all except the password length) in another loop ensures that the user has to have some criteria. If they were to select no for everything then there woud be no way to generate a password. 
 
-As discussed with Kerwin, there is no way to use a card straight out of the box and have it be responsive. But, if you make a container over your card you make it dance like a crazy person! However, the most obvious issue is not the container's lack of column sizing but the over abundance of p tags warning of the impending doom of  card text about to come. 
-
-Looking at my final code (likely not my final code). We can see that I have an overt fondness for paragraphs but that I included a long list of col sizing specifications.
-   ![Final Code](Assets/Images/responsivecode_03.png)
-
-I also included a style tag with a max width of 97%- this allows there to be a margin on the right hand side of the page when the text is reduced. I included a small amount of padding, because every beautiful visage deserves a little bit of padding to look at. 
+    Although it is not pictures, if you were to check the console log as you were making selections through the prompt you would see it logging the various selections made by the user. If for some reason the program broke or wasn't generating the kind of password intended this would show you where it may have gone and if the user misselected something. In future version I would like to display the selections on the page to allow the user to confirm these things without having to use the console log. 
 
 __3. A Generated password that meets all criteria__
 
@@ -145,11 +126,11 @@ _Why?_
    
    If I were going to do this again, I would use CSS or a style tag to make a background inside of a container instead of using a card. 
 
-* Sticky footer is see-through
+* There are not that many commits
 
 _Why?_
 
-   I want my portfolio to have the feeling of airy breezy-ness. I want it to say, "this girl is classy, easy to work with and doesn't overdo it." I am from the school of design that says design should be felt, not seen. It shouldn't get in your way of the experience but enhance it. I want a sticky footer but I want one that is there without too much commotion so I did part with the asthetic a bit to do that and later I will probably go back in and make my navbar more "breezy" as well.
+   I did most of the preliminary figuring out of my random generator and my button on paper and with my study group. There was an extensive amount of pseudocode/whiteboarding before I began typeing things in. I used my notes from the previous week to piece things together and think about how they would work or wouldn't work. I suppose I could add pictures of my notes but I am horribly ashamed of how messy they might look, and seeing as they were just for me -there is a huge chance that if you could them, you wouldn't be able to make sense of them. 
 
    * Your Portfolio is just pictures of projects with no github links
 
