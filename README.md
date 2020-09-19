@@ -62,10 +62,16 @@ __1. A series of prompts for password criteria__
  
 _Why?_
 
-In order to reach other pages of my portfolio I need a way to easily navigate between them. Another issue is that the nav bar needs to be able to adjust with the size of the viewing window, intelligently and beautifully. 
+To allow users to determine how secure they want their passwords. For instance, some security prompts require special charcters and some don't allow them. We wanted to create a password generator that any employee could use to secure infomration regardless of the specific requirements of their application. One generator to rule them all. 
 
 _What?/How?_
-	![Cade of the Navbar](Assets/Images/responsivecode_02.png)
+
+    In order to have a customizable password, selections need to be made before the password is generated. Therefore, when the button "Generate Password" is clicked a prompt comes up allows the user to input their specific criteria. If they don't enter any valid criteria then they alerted and sent back to the previous prompt to enter in valid criteria. If they do not select some combination of upper case, lower case, numbers and special characters they will be prompted again. 
+
+	![How?](Assets/codeprogressphoto4.png)
+
+    I created a series of while loops and if/else (conditional) statements that look for a boolean (true or false) of happyYet if we aren't happy Yet then we create more prompts/alerts. Each time a new loop on a new condition runs, happy Yet is reset and we have to use the conditional statement to turn it back to true. This is nested in yet another loop that checks if there are any yes statements. 
+
 
 The original code for the navbar came from the Bootstrap framework. However, there were a few issues with it:
 * It did not fix to top of the screen
@@ -125,13 +131,13 @@ Above is an image of the portfolio section with a very interesting bird on it. T
     
 __3. Other/Potentional Complaints__
 
-* The background image isn't fully on the screen (it's too big!)
+* All the colors in the CSS are green
 
 _Why?_
 
    I originally meant to resize it using CSS to make it more navigatible. However, I decided I like the simplicty of a little bit of mountain and a lot of sky. I also anticipate that my portfolio will grow and change and as it does my background image will become more visible-as the page gets longer. I love adding those little bits of surprise to my code and designs, it's like a fruity after taste that lingers in your mouth after a really good desert. 
 
-* I used cards instead of just containers with CSS and background applied
+* I used prompts instead of confirm statements
 
 _Why?_
 
