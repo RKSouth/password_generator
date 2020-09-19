@@ -34,7 +34,9 @@ function writePassword() {
 
   while (happyYet == false) {
     pwLength= parseInt(prompt("Choose a length of at least 8 characters and no more than 128 characters"));
-    if (pwLength >= 8 &&  pwLength <= 128) {happyYet = true;
+    if (pwLength >= 8 &&  pwLength <= 128) {
+      happyYet = true;
+      console.log("Length selected: " + pwLength);
     } else {
       alert("Please enter a number between 8 and 128");
     }
@@ -47,7 +49,9 @@ function writePassword() {
 
   while (happyYet == false) {
     pwUpper= prompt("Would you like Upper case letters in your password (y or n)?");
-    if (pwUpper == 'y'|| pwUpper =='n') {happyYet = true;
+    if (pwUpper == 'y'|| pwUpper =='n') {
+      happyYet = true;
+      console.log("Upper case letters selected: " + pwUpper);
     } else {
       alert("Please enter a y or an n");
     }
@@ -57,7 +61,9 @@ function writePassword() {
 
   while (happyYet == false) {
     pwLower=prompt("Would you like Lower case letters in your password (y or n)?");
-    if (pwLower == 'y'|| pwLower =='n') {happyYet = true;
+    if (pwLower == 'y'|| pwLower =='n') {
+      happyYet = true;
+      console.log("Lower case letters selected: " + pwLower);
     } else {
       alert("Please enter a y or an n");
     }
@@ -67,7 +73,9 @@ function writePassword() {
 
   while (happyYet == false) {
     pwSpecial= prompt("Would you like special characters in your password (y or n)?");
-    if (pwSpecial == 'y'|| pwSpecial =='n') {happyYet = true;
+    if (pwSpecial == 'y'|| pwSpecial =='n') {
+      happyYet = true;
+      console.log("Special characters selected: " + pwSpecial);
     } else {
       alert("Please enter a y or an n");
     }
@@ -77,7 +85,9 @@ function writePassword() {
 
   while (happyYet == false) {
     pwNumber=prompt("Would you like numbers in your password (y or n)?");
-    if (pwNumber == 'y'|| pwNumber =='n') {happyYet = true;
+    if (pwNumber == 'y'|| pwNumber =='n') {
+      happyYet = true;
+      console.log("Numbers selected: " + pwNumber );
     } else {
       alert("Please enter a y or an n");
     }
@@ -100,8 +110,12 @@ function writePassword() {
 
   //use generate password function with all user defined attrubites to generate password
   generatePassword(pwLength, pwUpper, pwLower, pwSpecial, pwNumber);
-  //make console log more readable
-  console.log(pwLength +pwUpper + pwLower + pwSpecial + pwNumber);
+  //make console log more readable -made it more readable moved to real-time generation 
+  // console.log("Length selected: " + pwLength);
+  // console.log("Upper case letters selected: " + pwUpper);
+  // console.log("Lower case letters selected: " + pwLower);
+  // console.log("Special characters selected: " + pwSpecial);
+  // console.log("Numbers selected: " + pwNumber );
   console.log(pass);
   document.getElementById('password').value = pass;
   // var password = generatePassword();
