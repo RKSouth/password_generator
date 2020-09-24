@@ -19,7 +19,7 @@
 * Javascript (56.3%)
 
 ## Deployed Site
-[Responsive Portfolio](https://rksouth.github.io/responsive_portfolio/)
+[Responsive Portfolio](https://rksouth.github.io/password_generator/)
 
 ## Features 
 
