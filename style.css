@@ -20,10 +20,10 @@ h2 {
 
 }
 textarea {
-  color: rgb(246, 237, 212);
+  color: rgb(31, 29, 25);
   font-variant: inherit;
-  background-color: black;
-  opacity: .70;
+  /* background-color: black;
+  opacity: .70; */
   width: 100%;
   text-align: center;
 }
