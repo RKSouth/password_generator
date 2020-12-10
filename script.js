@@ -68,6 +68,7 @@ function writePassword() {
     if (pwLower == 'y'|| pwLower =='n') {
       happyYet = true;
       console.log("Lower case letters selected: " + pwLower);
+      showLower(pwLower);
     } else {
       alert("Please enter a y or an n");
     }
@@ -80,6 +81,7 @@ function writePassword() {
     if (pwSpecial == 'y'|| pwSpecial =='n') {
       happyYet = true;
       console.log("Special characters selected: " + pwSpecial);
+      showSpecial(pwSpecial);
     } else {
       alert("Please enter a y or an n");
     }
@@ -92,6 +94,7 @@ function writePassword() {
     if (pwNumber == 'y'|| pwNumber =='n') {
       happyYet = true;
       console.log("Numbers selected: " + pwNumber );
+      showNumber(pwNumber);
     } else {
       alert("Please enter a y or an n");
     }
@@ -135,23 +138,37 @@ if (pwUpper === 'y') {
   console.log(pwUpper)
 }
 
-
 }
 
-// function showLower(){
-//   var passwordText = document.querySelector("#lower");
-//   passwordText.value = "Your password should contain " + pwLower + " characters";
-//   console.log(pwLower)
-// }
+function showLower(){
+  if (pwLower === 'y') {
+    var passwordText = document.querySelector("#lower");
+    passwordText.value = "Your password should contain lower case letters";
+  } else {
+    var passwordText = document.querySelector("#lower");
+    passwordText.value = "Your password will not contain lower case letters";
+  
+  }
+}
 
-// function showSpecial(){
-//   var passwordText = document.querySelector("#special");
-//   passwordText.value = "Your password should contain " + pwSpecial + " characters";
-//   console.log(pwSpecial)
-// }
+function showSpecial(){
+  if (pwSpecial === 'y') {
+    var passwordText = document.querySelector("#special");
+    passwordText.value = "Your password should contain special characters";
+  } else {
+    var passwordText = document.querySelector("#special");
+    passwordText.value = "Your password will not contain special characters";
+  
+  }
+}
 
-// function showNumber(){
-//   var passwordText = document.querySelector("#number");
-//   passwordText.value = "Your password should contain " + pwNumber + " characters";
-//   console.log(pwNumber)
-// }
+function showNumber(){
+  if (pwNumber === 'y') {
+    var passwordText = document.querySelector("#number");
+    passwordText.value = "Your password should contain numbers";
+  } else {
+    var passwordText = document.querySelector("#number");
+    passwordText.value = "Your password will not contain any numbers";
+  
+  }
+}

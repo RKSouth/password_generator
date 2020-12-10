@@ -29,9 +29,9 @@ textarea {
 }
 
 input {
-  color: rgb(246, 237, 212);
+  color: rgb(175, 28, 28);
  border-style: hidden;
-  background-color: black;
+  background-color: transparent;
   opacity: .70;
   text-align: center;
   width: 100%;
