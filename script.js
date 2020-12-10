@@ -33,6 +33,8 @@ function writePassword() {
   happyYet = false;
 
   while (happyYet == false) {
+    // var lengthMsg = document.querySelector("#message");
+    // lengthMsg.value = "Choose a length of at least 8 characters and no more than 128 characters";
     pwLength= parseInt(prompt("Choose a length of at least 8 characters and no more than 128 characters"));
     if (pwLength >= 8 &&  pwLength <= 128) {
       happyYet = true;
