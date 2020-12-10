@@ -27,3 +27,12 @@ textarea {
   width: 100%;
   text-align: center;
 }
+
+input {
+  color: rgb(246, 237, 212);
+  font-variant: inherit;
+  background-color: black;
+  opacity: .70;
+  text-align: center;
+  width: 100%;
+}

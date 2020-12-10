@@ -39,6 +39,7 @@ function writePassword() {
     if (pwLength >= 8 &&  pwLength <= 128) {
       happyYet = true;
       console.log("Length selected: " + pwLength);
+      showLength(pwLength);
     } else {
       alert("Please enter a number between 8 and 128");
     }
@@ -116,4 +117,11 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
+function showLength(){
+  var passwordText = document.querySelector("#length");
+  passwordText.value = "Your password should contain " + pwLength + " characters";
+  console.log(pwLength)
+
+}
 
