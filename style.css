@@ -30,7 +30,7 @@ textarea {
 
 input {
   color: rgb(246, 237, 212);
-  font-variant: inherit;
+ border-style: hidden;
   background-color: black;
   opacity: .70;
   text-align: center;

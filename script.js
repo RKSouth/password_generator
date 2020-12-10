@@ -55,6 +55,7 @@ function writePassword() {
     if (pwUpper == 'y'|| pwUpper =='n') {
       happyYet = true;
       console.log("Upper case letters selected: " + pwUpper);
+      showUpper(pwUpper)
     } else {
       alert("Please enter a y or an n");
     }
@@ -122,6 +123,35 @@ function showLength(){
   var passwordText = document.querySelector("#length");
   passwordText.value = "Your password should contain " + pwLength + " characters";
   console.log(pwLength)
+}
+
+function showUpper(){
+if (pwUpper === 'y') {
+  var passwordText = document.querySelector("#upper");
+  passwordText.value = "Your password should contain upper case letters";
+} else {
+  var passwordText = document.querySelector("#upper");
+  passwordText.value = "Your password will not contain upper case letters";
+  console.log(pwUpper)
+}
+
 
 }
 
+// function showLower(){
+//   var passwordText = document.querySelector("#lower");
+//   passwordText.value = "Your password should contain " + pwLower + " characters";
+//   console.log(pwLower)
+// }
+
+// function showSpecial(){
+//   var passwordText = document.querySelector("#special");
+//   passwordText.value = "Your password should contain " + pwSpecial + " characters";
+//   console.log(pwSpecial)
+// }
+
+// function showNumber(){
+//   var passwordText = document.querySelector("#number");
+//   passwordText.value = "Your password should contain " + pwNumber + " characters";
+//   console.log(pwNumber)
+// }
