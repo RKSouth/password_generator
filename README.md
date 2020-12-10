@@ -123,11 +123,7 @@ Finally, we have to tell the button to listen. What to listen for? A click! What
     
 __5. Other/Potentional Complaints__
 
-* All the colors in the CSS are green
 
-_Why?_
-
-In my working experience, the folks that need extra secure passwords are also the ones that need to relax. I chose to edit the CSS  to create a calmer color pallete that would easy on the eyes for those working in stressful environments. I know it might be a huge stretch but I would hope that if someone comes to my site and generates a new password that they might enjoy the calm refreshing green I chose, they might feel renewed in their work and ready to acheive great things with sensitive data. 
 
 * I used prompts instead of confirm statements
 
@@ -141,7 +137,11 @@ _Why?_
 
 I did most of the preliminary figuring out of my random generator and my button on paper and with my study group. There was an extensive amount of pseudocode/whiteboarding before I began typeing things in. I used my notes from the previous week to piece things together and think about how they would work or wouldn't work. I suppose I could add pictures of my notes but I am horribly ashamed of how messy they might look, and seeing as they were just for me -there is a huge chance that if you could them, you wouldn't be able to make sense of them. 
 
-  
+* We can't figure out what kind of password I originally selected
+
+_Why?_
+
+Because at the time, it wasn't required but you know what, I like to know things so I think this is something that should be added in.
 
 ## Usage
 ### This is meant for employees who need to generate secure passwords to be used to access sensitive data.
