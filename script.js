@@ -101,25 +101,15 @@ function writePassword() {
   }
 }
 //end of while loop to see if there are y's 
-  //leaving the parseInt in to remind me that prompts always return strings. 
-  // pwLength= parseInt(prompt("Choose a length of at least 8 characters and no more than 128 characters"));
-  // pwUpper= prompt("Would you like Upper case letters in your password (y or n)?");
-  // pwLower=prompt("Would you like Lower case letters in your password (y or n)?");
-  // pwSpecial= prompt("Would you like special characters in your password (y or n)?");
-  // pwNumber=prompt("Would you like numbers in your password (y or n)?");
+ 
 
   //use generate password function with all user defined attrubites to generate password
   generatePassword(pwLength, pwUpper, pwLower, pwSpecial, pwNumber);
   //make console log more readable -made it more readable moved to real-time generation 
-  // console.log("Length selected: " + pwLength);
-  // console.log("Upper case letters selected: " + pwUpper);
-  // console.log("Lower case letters selected: " + pwLower);
-  // console.log("Special characters selected: " + pwSpecial);
-  // console.log("Numbers selected: " + pwNumber );
+
   console.log(pass);
-  // var password = generatePassword();
-  // var passwordText = document.querySelector("#password");
-  // passwordText.value = pass;
+  var passwordText = document.querySelector("#password");
+  passwordText.value = pass;
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
