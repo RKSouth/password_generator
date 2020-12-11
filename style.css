@@ -17,10 +17,13 @@ h2 {
   background-color: black;
   opacity: .70;
   text-align: center;
+  margin: 3%;
 
 }
 textarea {
   color: rgb(31, 29, 25);
+  font-weight: bolder;
+  font-size: medium;
   font-variant: inherit;
   /* background-color: black;
   opacity: .70; */
@@ -29,10 +32,15 @@ textarea {
 }
 
 input {
-  color: rgb(175, 28, 28);
+  color:  rgb(246, 237, 212);
+  background-color: black;
+font-size: medium;
  border-style: hidden;
-  background-color: transparent;
-  opacity: .70;
-  text-align: center;
+  /* background-color: transparent; */
+ width: 100%;
+ text-align: center;
+
+}
+p {
   width: 100%;
 }
