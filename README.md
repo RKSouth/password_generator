@@ -129,19 +129,21 @@ __5. Other/Potentional Complaints__
 
 _Why?_
 
-Mainly because prompts were specifically requested. However, using a yes or no might be simpler in the long run. 
+Mainly because prompts were specifically requested. However, using a yes or no might be simpler in the long run. Another system that might be beneficial is have a cute little set of questions appear with button selections for each, much like the code quiz
 
-* There are not that many commits
+
+
+* Sometimes it says it is suppose to have numbers but it doesn't have numbers
+
+_Why?_ 
+
+There is a flaw in the formula I chose to build this project with and I still don't have it worked out yet. Mainly, because I am scared to touch it and break it. Once I conquer my fear, I will get back at it. 
+
+*  This code could be built in react.
 
 _Why?_
 
-I did most of the preliminary figuring out of my random generator and my button on paper and with my study group. There was an extensive amount of pseudocode/whiteboarding before I began typeing things in. I used my notes from the previous week to piece things together and think about how they would work or wouldn't work. I suppose I could add pictures of my notes but I am horribly ashamed of how messy they might look, and seeing as they were just for me -there is a huge chance that if you could them, you wouldn't be able to make sense of them. 
-
-* We can't figure out what kind of password I originally selected
-
-_Why?_
-
-Because at the time, it wasn't required but you know what, I like to know things so I think this is something that should be added in.
+Because react has more fun!
 
 ## Usage
 ### This is meant for employees who need to generate secure passwords to be used to access sensitive data.
