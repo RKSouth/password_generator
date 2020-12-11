@@ -2,13 +2,15 @@
 var generateBtn = document.querySelector("#generate");
 var pass = "";
 //create pw
+
+var uCase =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lCase = "abcdefghijklmnopqrstuvwxyz";
+var sChar = "!@#$%^&*()-+<>";
+var num = "0123456789";
 //function is having all user prompt responses in to the generated function
 function generatePassword(length, upper, lower, special, number) {
   //Creating variables to pass through random generator
-  var uCase =  "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var lCase = "abcdefghijklmnopqrstuvwxyz";
-  var sChar = "!@#$%^&*()-+<>";
-  var num = "0123456789";
+
   //setting variables to blank set if n indicated
   if (upper == 'n')  {uCase = ""};
   if (lower == 'n')  {lCase = ""};
@@ -21,6 +23,7 @@ function generatePassword(length, upper, lower, special, number) {
       var i = Math.floor(Math.random() * chars.length);
       pass += chars.charAt(i);
   }
+  // checkResults(uCase, lCase, sChar, num);
 }
 
 // Write password to the #password input
@@ -108,7 +111,8 @@ function writePassword() {
   }
 }
 //end of while loop to see if there are y's 
- 
+
+
 
   //use generate password function with all user defined attrubites to generate password
   generatePassword(pwLength, pwUpper, pwLower, pwSpecial, pwNumber);
@@ -121,7 +125,37 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+//to check if password really contains all it's suppose to
+// function checkResults() {
+//   console.log("password checked")
 
+//   if (pwUpper === 'y' && pass.includes(uCase)) {
+//     return true
+// } else {
+//   generatePassword(pwLength, pwUpper, pwLower, pwSpecial, pwNumber);
+// }
+// if (pwLower === 'y' && pass.includes(lCase)) {
+//   return true
+// } else {
+//   generatePassword(pwLength, pwUpper, pwLower, pwSpecial, pwNumber);
+// }
+
+// if (pwSpecial === 'y' && pass.includes(sChar)) {
+//   return true
+// } else {
+//   generatePassword(pwLength, pwUpper, pwLower, pwSpecial, pwNumber);
+// }
+
+// if (pwUpper === 'y' && pass.includes(num)) {
+//   return true
+// } else {
+//   generatePassword(pwLength, pwUpper, pwLower, pwSpecial, pwNumber);
+// }
+
+// }
+
+
+//these group of functions display a message saying what your password should contain
 function showLength(){
   var passwordText = document.querySelector("#length");
   passwordText.value = "Your password should contain " + pwLength + " characters";
