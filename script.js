@@ -8,6 +8,25 @@ const specialEl = document.getElementById('symbols');
 const generateEl = document.getElementById('generate');
 const clipboardEl = document.getElementById('clipboard');
 
+function getRandomLower() {
+  //97 to 122 is are lowercase letters
+ return  String.fromCharCode(Math.floor(Math.random() *26) + 97)
+}
+function getRandomUpper() {
+  return String.fromCharCode(Math.floor(Math.random() *26) + 65)
+}
+
+function getRandomNumbers() {
+  return String.fromCharCode(Math.floor(Math.random() *10)+ 48)
+}
+
+function getRandomSpecial() {
+  const specials = '!@#$%^&*(){}[]-_=,.<>?/|;:~`'
+  return specials[Math.floor(Math.random() * specials.length)];
+}
+
+console.log(getRandomUpper(), getRandomLower(), getRandomNumbers(), getRandomSpecial())
+
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
