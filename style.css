@@ -18,17 +18,22 @@ h2 {
   opacity: .70;
   text-align: center;
   margin: 3%;
+  max-width: 70%;
 
 }
+.result-container{
+  padding: 20px;
 
+}
 textarea {
-  color: rgb(31, 29, 25);
+  color: rgb(47, 47, 47);
   font-weight: bolder;
   font-size: medium;
   font-variant: inherit;
-  /* background-color: black;
-  opacity: .70; */
+ /* min-height: 100px; */
   width: 100%;
+  padding: 10px;
+  margin: 10px;
   text-align: center;
 }
 
@@ -38,56 +43,19 @@ input {
 font-size: medium;
  border-style: hidden;
   /* background-color: transparent; */
- width: 100%;
+ width: 50%;
  text-align: center;
+ padding: 10px;
+ margin: 10px;
 
 }
 p {
   width: 100%;
 }
-.setting {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 15px 0;
+
+label {
+  width: 50%;
+  background-color: rgb(47, 47, 47);
 }
 
-@media screen and (max-width: 400px) {
-	.result-container {
-		font-size: 14px;
-	}
-}
-body {
-	display: flex;
-	font-family: 'Muli', sans-serif;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: 10px;
-	min-height: 100vh;
-}
 
-.result-container {
-	background-color: rgba(0, 0, 0, 0.4);
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	position: relative;
-	font-size: 18px;
-	letter-spacing: 1px;
-	padding: 12px 10px;
-	height: 50px;
-	width: 100%;
-}
-.result-container #result {
-  word-wrap: break-word;
-max-width: calc(100% - 40px);
-}
-.result-container .btn {
-	font-size: 20px;
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	height: 40px;
-	width: 40px;
-}
