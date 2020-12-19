@@ -93,7 +93,8 @@ console.log(generatedPassword)
 
   //4. add final password to the password variable and return it 
 
- const finalPassword = generatedPassword.slice(0, length);
+const finalPassword = generatedPassword.slice(0, length);
+
 
 return finalPassword
 }
